@@ -54,7 +54,7 @@ class MyClass {
     set prop(value) {
         this.event = 'original setter run: ' + value;
     }
-};
+}
 
 describe('Sandboxed object', () => {
     let sandbox, instance;
@@ -72,7 +72,7 @@ describe('Sandboxed object', () => {
 
     afterEach( () => {
         sandbox.restore();
-    })
+    });
 
     it('returns the stubbed getter', () => {
         instance.prop.should.equal('test value');
