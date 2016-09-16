@@ -1,0 +1,35 @@
+{
+  "name": "object-sandbox",
+  "version": "1.0.0",
+  "description": "Nodejs object sandboxes",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HughePaul/object-sandbox.git"
+  },
+  "keywords": [
+    "sinon",
+    "mocha",
+    "chai",
+    "getters",
+    "setters"
+  ],
+  "author": "Paul Winkler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HughePaul/object-sandbox/issues"
+  },
+  "homepage": "https://github.com/HughePaul/object-sandbox#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.5.0",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5"
+  }
+}
