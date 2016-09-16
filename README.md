@@ -5,7 +5,7 @@ Save and restore definition of Nodejs objects to allow stubbing of properties, m
 Sandbox objects
 ```
 let obj1 = {
-    method: () => console.log('original'); 
+    method() { console.log('original'); }
 };
 let obj2 = {
     foo: 'bar'
