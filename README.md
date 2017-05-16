@@ -35,7 +35,7 @@ obj1.method(); // original
 obj2.foo === 'bar' // true
 ```
 
-This can be used to sandbox and resture objects with sinon stubbed getters and setters, as sinon doesn't support restoring getters yet (<2.0.0), as it tries to run the getter while restoring.
+This can be used to sandbox and restore objects with sinon stubbed getters and setters, as sinon doesn't support restoring getters (2.2.0), as it tries to run the getter while restoring, and sinon.sandbox doesn't support defining getters.
 
 ```
 const sinon = require('sinon');
@@ -61,11 +61,9 @@ describe('Sandboxed object', () => {
 
     beforeEach( () => {
         sandbox = objectSandbox.create(MyClass.prototype);
-        sinon.stub(MyClass.prototype, 'prop', {
-            get() {
-                this.event = 'stubbed getter run';
-                return 'test value';
-            }
+        sinon.stub(MyClass.prototype, 'prop').get(function () {
+            this.event = 'stubbed getter run';
+            return 'test value';
         });
         instance = new MyClass;
     });
