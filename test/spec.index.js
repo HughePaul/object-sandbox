@@ -110,11 +110,9 @@ describe('object-sandbox', () => {
 
             beforeEach( () => {
                 sandbox = objectSandbox.create(MyClass.prototype);
-                sinon.stub(MyClass.prototype, 'prop', {
-                    get() {
-                        this.event = 'stubbed getter run';
-                        return 'test value';
-                    }
+                sinon.stub(MyClass.prototype, 'prop').get(function () {
+                    this.event = 'stubbed getter run';
+                    return 'test value';
                 });
                 instance = new MyClass;
             });
