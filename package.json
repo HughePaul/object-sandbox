@@ -1,6 +1,6 @@
 {
   "name": "object-sandbox",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Nodejs object sandboxes",
   "main": "index.js",
   "directories": {
